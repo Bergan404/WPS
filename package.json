@@ -13,6 +13,7 @@
     "@astrojs/check": "^0.9.3",
     "@popperjs/core": "^2.11.8",
     "@types/bootstrap": "^5.2.10",
+    "aos": "^2.3.4",
     "astro": "^4.15.9",
     "astro-bootstrap": "^0.7.0",
     "bootstrap": "^5.3.3",

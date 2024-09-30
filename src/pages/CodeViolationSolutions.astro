@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Image from 'astro/components/Image.astro';
+
+import StepByStep from '../components/StepByStep.astro';
+import ContactBox from '../components/ContactBox.astro';
+
+import Violations from "../assets/images/WPS-Code_violations.png";
+import Talk from "../assets/images/talk.png";
+import Approval from "../assets/images/approval.png";
+import Agreement from "../assets/images/agreement.png";
+import Resolution from "../assets/images/approval (1).png";
+---
+
+<Layout title="WPS - Code Violation Solutions">
+	<header class="hero">
+        <Image src={Violations} alt="Beautiful Florida Home" id="houseopen"/>
+		<div class="overlay"></div>
+		<div class="hero-content">
+			<h4 class="baskervville-regular">WHIDDON PROPERTY SOLUTIONS</h4>
+			<h2 class="bold">Code Violation Solutions</h2>
+            <p>Swift and stress-free resolution of code violations, ensuring compliance and peace of mind for property owners in Broward County.</p>
+		</div>
+	</header>
+
+	<section class="text_content_background">
+		<div class="container py-3">
+			<h4 class="baskervville-regular text-center">How It Works</h4>
+
+			<StepByStep
+				imagePath={Talk}
+				title="Initial Consultation"
+				body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+			/>
+
+			<StepByStep
+				imagePath={Approval}
+				title="Document Review and Submission"
+				body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+			/>
+
+			<StepByStep
+				imagePath={Agreement}
+				title="City Official Interaction"
+				body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+			/>
+
+			<StepByStep
+				imagePath={Resolution}
+				title="Case Resolution"
+				body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+			/>
+
+			<ContactBox
+				text="Need Help with a Code Violation? Contact Us Today for a Free Consultation."
+			/>
+
+		</div>
+	</section>
+</Layout>
+
+<style>
+	header {
+		margin: auto;
+		padding: 1rem;
+		/* width: 800px; */
+		/* max-width: calc(100% - 2rem); */
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+		height: 100vh;
+	}
+	#houseopen {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		min-width: 100%;
+		min-height: 100%;
+	}
+	.hero-content {
+		display: grid;
+		place-content: center;
+		height: 100vh;
+		width: 100%;
+		z-index: 10;
+		position: relative;
+		text-align: center;
+	}
+	.home_content {
+		background-size: cover;
+	}
+	.image_box img{
+		width: 100%;
+		height: 100%;
+	}
+</style>
