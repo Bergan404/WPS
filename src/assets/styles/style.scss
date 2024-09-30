@@ -1,4 +1,15 @@
+/* COLORS */
+$light-tan: #D9CFC5;
+$color-tan: #C2AA95;
+$color-blue: #536F9A;
+$color-black: #000000;
+$color-white: #FFFFFF;
+
 /* MIN-WIDTH */
+
+@mixin xxl-screen {
+    @media (min-width: 1500px) { @content; }
+}
 
 @mixin xl-screen {
     @media (min-width: 1280px) { @content; }

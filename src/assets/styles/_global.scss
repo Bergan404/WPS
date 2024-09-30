@@ -26,13 +26,39 @@
 }
 
 body {
-    background: #000 !important;
+    // background: #000 !important;
     // height: 100vh;
     // width: 100vw;
     user-select: none;
 
     overflow-x: hidden;
     margin: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+// .text_content_background {
+//     position: relative;
+// }
+
+// .text_content_background::before {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     bottom: 0;
+//     right: 0;
+//     background: url("../images/WPS-Svg_background.svg");
+//     opacity: .2;
+//     content: "";
+//     z-index: -1;
+// }
+
+.text_content_background {
+    background: url("../images/WPS-Svg_background_light.svg");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -119,10 +145,9 @@ h6 {
 }
 
 p {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin: 0px 0px 1rem;
-    line-height: 1.5em;
-    font-family: "abolition", sans-serif;
+    font-family: Aktiv_Regular, sans-serif;
 
     @include mobile {
         font-size: 1.27em;
@@ -381,6 +406,10 @@ svg {
     letter-spacing: 6px;
     font-weight: 500;
     color: white;
+}
+
+.bold {
+    font-family: Aktiv_Bold, sans-serif;
 }
 
 .grid-left {
