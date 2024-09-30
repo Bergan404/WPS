@@ -6,52 +6,52 @@ import Image from 'astro/components/Image.astro';
 import KeyPoints from '../components/KeyPoints.astro';
 import ContactBox from '../components/ContactBox.astro';
 
-import Violations from "../assets/images/WPS-Permit.png";
+import Violations from "../assets/images/WPS-General_consultations.png";
 import Agreement from "../assets/images/agreement.png";
-import Resolution from "../assets/images/approval (1).png";
-import Route from "../assets/images/route.png";
+import House from "../assets/images/house.png";
+import Book from "../assets/images/book.png";
 import Clock from "../assets/images/clock.png"
 ---
 
-<Layout title="WPS - Permitting Solutions">
+<Layout title="WPS - General Consultations">
 	<header class="hero container">
         <Image src={Violations} alt="Plans" id="houseopen"/>
 		<div class="overlay"></div>
 		<div class="hero-content">
 			<h4 class="baskervville-regular">WHIDDON PROPERTY SOLUTIONS</h4>
-			<h2 class="bold">Permitting Solutions</h2>
-            <p>Simplify the permitting process with Whiddon Property Solutions. From form submissions to final approvals, we manage every detail, ensuring compliance and peace of mind.</p>
+			<h2 class="bold">General Consultations</h2>
+            <p>Expert advice is just a call away. Whether you're facing complex property issues or need general guidance, Whiddon Property Solutions is here to help.</p>
 		</div>
 	</header>
 
 	<section class="text_content_background">
 		<div class="container py-3">
-			<h4 class="baskervville-regular text-center">Why Permitting Solutions Matter</h4>
-            <p class="text-center py-3">Whether you're planning new construction or renovations, navigating local permit requirements can be time-consuming and complex. With Whiddon Property Solutions, we ensure that all the necessary forms are properly handled, submitted, and approved—taking the guesswork out of permitting.</p>
+			<h4 class="baskervville-regular text-center">Comprehensive Guidance for Property Owners</h4>
+            <p class="text-center py-3">Our consultations cover a wide range of property challenges, from navigating city ordinances and regulations to resolving complex legal issues. No matter the difficulty, our experienced team will provide you with tailored solutions.</p>
 
-			<h4 class="baskervville-regular text-center">Why Choose Whiddon Property Solutions for Permitting?</h4>
+			<h4 class="baskervville-regular text-center">Why Choose Whiddon Property Solutions for Your Consultation?</h4>
 
             <div class="row gap-2">
                 <KeyPoints
-                    imagePath={Resolution}
-                    text="Expertise in local permitting regulations."
-                />
-                <KeyPoints
-                    imagePath={Route}
-                    text="Full-service support from start to finish."
-                />
-                <KeyPoints
                     imagePath={Clock}
-                    text="Timely submissions to avoid delays."
+                    text="Around-the-clock availability."
+                />
+                <KeyPoints
+                    imagePath={Book}
+                    text="In-depth knowledge of Broward County regulations."
+                />
+                <KeyPoints
+                    imagePath={House}
+                    text="Over a decade of experience resolving complex property issues."
                 />
                 <KeyPoints
                     imagePath={Agreement}
-                    text="Peace of mind for property owners."
+                    text="Dedicated team for personalized support."
                 />
             </div>
 
 			<ContactBox
-				text="Need Help with a Permitting Solutions? Contact Us Today for a Free Consultation."
+				text="Need Help with General Consultations? Contact Us Today for a Free Consultation."
 			/>
 
 		</div>
