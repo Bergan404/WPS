@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Image from 'astro/components/Image.astro';
+
+import StepByStep from '../components/StepByStep.astro';
+import ContactBox from '../components/ContactBox.astro';
+
+import Violations from "../assets/images/WPS-Permit.png";
+import Talk from "../assets/images/talk.png";
+import Approval from "../assets/images/approval.png";
+import Agreement from "../assets/images/agreement.png";
+import Inspection from "../assets/images/inspection.png";
+import Resolution from "../assets/images/approval (1).png";
+---
+
+<Layout title="WPS - Permitting Solutions">
+	<header class="hero container">
+        <Image src={Violations} alt="Plans" id="houseopen"/>
+		<div class="overlay"></div>
+		<div class="hero-content">
+			<h4 class="baskervville-regular">WHIDDON PROPERTY SOLUTIONS</h4>
+			<h2 class="bold">Permitting Solutions</h2>
+            <p>Simplify the permitting process with Whiddon Property Solutions. From form submissions to final approvals, we manage every detail, ensuring compliance and peace of mind.</p>
+		</div>
+	</header>
+
+	<section class="text_content_background">
+		<div class="container py-3">
+			<h4 class="baskervville-regular text-center">Why Permitting Solutions Matter</h4>
+            <p class="text-center py-3">Whether you're planning new construction or renovations, navigating local permit requirements can be time-consuming and complex. With Whiddon Property Solutions, we ensure that all the necessary forms are properly handled, submitted, and approved—taking the guesswork out of permitting.</p>
+
+			<h4 class="baskervville-regular text-center">Why Choose Whiddon Property Solutions for Permitting?</h4>
+
+			<ContactBox
+				text="Need Help with a Building Violation? Contact Us Today for a Free Consultation."
+			/>
+
+		</div>
+	</section>
+</Layout>
+
+<style>
+	header {
+		margin: auto;
+		padding: 1rem;
+		/* width: 800px; */
+		/* max-width: calc(100% - 2rem); */
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+		height: 100vh;
+	}
+	#houseopen {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		min-width: 100%;
+		min-height: 100%;
+        width: 100%;
+        height: 100%;
+	}
+	.hero-content {
+		display: grid;
+		place-content: center;
+		height: 100vh;
+		width: 100%;
+		z-index: 10;
+		position: relative;
+		text-align: center;
+	}
+	.home_content {
+		background-size: cover;
+	}
+	.image_box img{
+		width: 100%;
+		height: 100%;
+	}
+</style>
