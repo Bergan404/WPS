@@ -81,6 +81,10 @@ body::-webkit-scrollbar {
     font-family: Aktiv_Bold, sans-serif;
     text-transform: uppercase;
 
+    @include mobile {
+        font-size: 1rem;
+    }
+
     li {
         animation: rotateWords 9s ease-in-out infinite backwards;
         position: absolute;
@@ -160,7 +164,7 @@ h4 {
     }
 
     @include mobile {
-        font-size: 1.7em;
+        font-size: 1.5em;
         font-weight: 100;
     }
 }
@@ -188,7 +192,7 @@ p {
     font-family: Aktiv_Regular, sans-serif;
 
     @include mobile {
-        font-size: 1.27em;
+        font-size: 1rem;
     }
 }
 

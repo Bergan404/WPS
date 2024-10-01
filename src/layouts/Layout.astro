@@ -1,5 +1,7 @@
 ---
 import Navbar from "../components/Navbar/Navbar.astro";
+import Footer from "../components/Footer/Footer.astro";
+
 interface Props {
 	title: string;
 }
@@ -18,7 +20,7 @@ import "aos/dist/aos.css";
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/Favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<script>
@@ -30,6 +32,7 @@ import "aos/dist/aos.css";
 	<body>
 		<slot />
 	</body>
+	<Footer />
 
 	<style is:global>
 		:root {
