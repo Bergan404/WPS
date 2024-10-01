@@ -1,10 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-import Image from 'astro/components/Image.astro';
-
 import KeyPoints from '../components/KeyPoints.astro';
 import ContactBox from '../components/ContactBox.astro';
+import HeroSection from '../components/HeroSection.astro';
 
 import Violations from "../assets/images/WPS-General_consultations.png";
 import Agreement from "../assets/images/agreement.png";
@@ -14,15 +13,11 @@ import Clock from "../assets/images/clock.png"
 ---
 
 <Layout title="WPS - General Consultations">
-	<header class="hero container">
-        <Image src={Violations} alt="Plans" id="houseopen"/>
-		<div class="overlay"></div>
-		<div class="hero-content">
-			<h4 class="baskervville-regular">WHIDDON PROPERTY SOLUTIONS</h4>
-			<h2 class="bold">General Consultations</h2>
-            <p>Expert advice is just a call away. Whether you're facing complex property issues or need general guidance, Whiddon Property Solutions is here to help.</p>
-		</div>
-	</header>
+    <HeroSection
+		imagePath={Violations}
+		title="General Consultations"
+		body="Expert advice is just a call away. Whether you're facing complex property issues or need general guidance, Whiddon Property Solutions is here to help."
+	/>
 
 	<section class="text_content_background">
 		<div class="container py-3">
@@ -59,34 +54,6 @@ import Clock from "../assets/images/clock.png"
 </Layout>
 
 <style>
-	header {
-		margin: auto;
-		padding: 1rem;
-		/* width: 800px; */
-		/* max-width: calc(100% - 2rem); */
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-		height: 100vh;
-	}
-	#houseopen {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		min-width: 100%;
-		min-height: 100%;
-        width: 100%;
-        height: 100%;
-	}
-	.hero-content {
-		display: grid;
-		place-content: center;
-		height: 100vh;
-		width: 100%;
-		z-index: 10;
-		position: relative;
-		text-align: center;
-	}
 	.home_content {
 		background-size: cover;
 	}
