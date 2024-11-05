@@ -1,30 +1,54 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-import KeyPoints from '../components/KeyPoints.astro';
-import ContactBox from '../components/ContactBox.astro';
-import HeroSection from '../components/HeroSection.astro';
+import KeyPoints from "../components/KeyPoints.astro";
+import ContactBox from "../components/ContactBox.astro";
+import HeroSection from "../components/HeroSection.astro";
 
 import Violations from "../assets/images/WPS-Permit.png";
 import Agreement from "../assets/images/agreement.png";
 import Resolution from "../assets/images/approval (1).png";
 import Route from "../assets/images/route.png";
-import Clock from "../assets/images/clock.png"
+import Clock from "../assets/images/clock.png";
 ---
 
 <Layout title="WPS - Permitting Solutions">
     <HeroSection
-		imagePath={Violations}
-		title="Permitting Solutions"
-		body="Simplify the permitting process with Whiddon Property Solutions. From form submissions to final approvals, we manage every detail, ensuring compliance and peace of mind."
-	/>
+        imagePath={Violations}
+        title="Permitting Solutions"
+        body="Simplify the permitting process with Whiddon Property Solutions. From form submissions to final approvals, we manage every detail, ensuring compliance and peace of mind."
+    />
 
-	<section class="text_content_background">
-		<div class="container py-3">
-			<h4 class="baskervville-regular text-center">Why Permitting Solutions Matter</h4>
-            <p class="text-center py-3">Whether you're planning new construction or renovations, navigating local permit requirements can be time-consuming and complex. With Whiddon Property Solutions, we ensure that all the necessary forms are properly handled, submitted, and approved—taking the guesswork out of permitting.</p>
+    <section class="text_content_background">
+        <div class="container py-3">
+            <h4 class="baskervville-regular text-center">
+                Why Permitting Solutions Matter
+            </h4>
+            <p class="text-center py-3">
+                Whether you're planning new construction or renovations,
+                navigating local permit requirements can be time-consuming and
+                complex. With Whiddon Property Solutions, we ensure that all the
+                necessary forms are properly handled, submitted, and
+                approved—taking the guesswork out of permitting.
+            </p>
 
-			<h4 class="baskervville-regular text-center">Why Choose Whiddon Property Solutions for Permitting?</h4>
+            <p class="text-center py-3">
+                An expired or open permit remains on a property's record for
+                years, and even if the property changes hands, the associated
+                issues persist with the property itself rather than individual
+                owners.
+            </p>
+
+            <p class="text-center py-3">
+                Permit violations pose a significant hurdle in real estate
+                transactions. If permit issues go undetected during the sale,
+                the consequences can be severe, as any outstanding violations
+                then become the responsibility of the new owner(s)
+            </p>
+
+            <h4 class="baskervville-regular text-center">
+                Why Choose Whiddon Property Solutions for Permitting?
+            </h4>
 
             <div class="row gap-2">
                 <KeyPoints
@@ -45,20 +69,19 @@ import Clock from "../assets/images/clock.png"
                 />
             </div>
 
-			<ContactBox
-				text="Need Help with a Permitting Solutions? Contact Us Today for a Free Consultation."
-			/>
-
-		</div>
-	</section>
+            <ContactBox
+                text="Need Help with a Permitting Solutions? Contact Us Today for a Free Consultation."
+            />
+        </div>
+    </section>
 </Layout>
 
 <style>
-	.home_content {
-		background-size: cover;
-	}
-	.image_box img{
-		width: 100%;
-		height: 100%;
-	}
+    .home_content {
+        background-size: cover;
+    }
+    .image_box img {
+        width: 100%;
+        height: 100%;
+    }
 </style>
