@@ -29,7 +29,7 @@ const imagePathAwaiting = await getImage({
         <h2 class="bold">{title}</h2>
         <p>{body}</p>
         <Button
-            link="/"
+            link="tel:9546497315"
             text="Work With Us"
         />
     </div>
@@ -54,6 +54,7 @@ const imagePathAwaiting = await getImage({
 		min-height: 100%;
         width: 100%;
         height: 100%;
+		object-fit: cover;
 	}
 	.hero-content {
 		display: grid;
@@ -70,5 +71,27 @@ const imagePathAwaiting = await getImage({
 	.image_box img{
 		width: 100%;
 		height: 100%;
+	}
+	@media screen and (max-width: 500px) {
+		header {
+			margin: auto;
+			padding: 1rem;
+			/* width: 800px; */
+			/* max-width: calc(100% - 2rem); */
+			color: white;
+			font-size: 20px;
+			line-height: 1.6;
+			height: 75vh;
+			position: relative;
+		}
+		.hero-content {
+			display: grid;
+			place-content: center;
+			height: 100%;
+			width: 100%;
+			z-index: 10;
+			position: relative;
+			text-align: center;
+		}
 	}
 </style>

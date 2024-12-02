@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/LayoutBlack.astro';
+
+import ContactBox from '../components/ContactBox.astro';
+import AboutHeroSection from '../components/AboutHeroSection.astro';
+
+import Violations from "../assets/images/WPS-Home_repairs.png";
+---
+
+<Layout title="WPS - About Us">
+
+	<section class="text_content_background">
+        <AboutHeroSection />
+
+		<div class="container py-3">
+
+			<p class="text-center py-3">Whiddon Property Solutions is your fully concierge, premier property compliance experts offering a white-glove experience for all homeowners and other types of property owners in Broward, Palm Beach, and Miami-Dade County of South Florida. Our team specializes in resolving property-related challenges including code violations, open permits, general permitting issues, and more.</p>
+
+            <p class="text-center py-3">Our expert team handles every detail, from overseeing interactions with city officials and clerks to handling all necessary city documents and coordinating meetings with building inspectors to ensure your case is resolved in a timely manner.</p>
+
+            <p class="text-center py-3">We pride ourselves heavily on our 24/7, around-the-clock customer service. With our white-glove approach, Whiddon Property Solutions provides a “hands-on” approach.  Once the job is underway, our team will provide plenty of updates throughout the entire process while guaranteeing seamless property compliance for all customers and clients.</p>
+
+            <p class="text-center py-3">At Whiddon Property Solutions, we specialize in getting one of your biggest assets back on track, providing a smooth process to sell, renovate, or enhance without delving deeper into any other issues with the subject City in which your property is located.</p>
+
+            <p class="text-center py-3">From single-family homes to commercial and industrial properties, we’ve got you covered! </p>
+
+			<ContactBox
+				text="For a free consultation, contact us at (954) 649-7315 or (954) 649-7444."
+			/>
+
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.home_content {
+		background-size: cover;
+	}
+	.image_box img{
+		width: 100%;
+		height: 100%;
+	}
+</style>

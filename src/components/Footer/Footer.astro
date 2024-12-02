@@ -3,40 +3,55 @@ import WPS from "../../assets/images/WPS-Logo.svg?raw";
 ---
 
 <footer class="container-fluid footer p-3">
-    <div class="row justify-content-between align-items-center">
+    <div class="row justify-content-md-between justify-content-center align-items-center">
         <div class="col-auto">
             <a class="navbar-logo" href="/">
                 <Fragment set:html={WPS} />
             </a>
         </div>
-        <div class="col-auto">
+        <div class="col-auto d-none d-md-flex">
             <nav class="navigation-menu d-none d-md-flex align-items-center">
                 <div class="menu-primary-container">
                     <ul id="menu-primary" class="menu">
                         <li
                             class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
-                            <a href="/CodeViolationSolutions">Code Violation Solutions</a>
+                            <a href="/AboutUs">About Us</a>
                         </li>
                         <li
+                            class="menu-item menu-item-type-custom menu-item-object-custom"
+                        >
+                            <a href="/CodeViolationSolutions">Code Violations</a>
+                        </li>
+                        <!-- <li
                             class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
                             <a href="/BuildingViolationSolutions">Building Violation Solutions</a>
-                        </li>
+                        </li> -->
                         <li
                             class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
-                            <a href="/PermittingSolutions">Permitting Solutions</a>
+                            <a href="/PermittingSolutions">Open Permits/General Permitting</a>
                         </li>
-                        <li
+                        <!-- <li
                             class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
                             <a href="/UnsafeStructureViolations">Unsafe structure violations</a>
+                        </li> -->
+                        <li
+                            class="menu-item menu-item-type-custom menu-item-object-custom"
+                        >
+                            <a href="/GeneralConsultations">Consultations</a>
                         </li>
                         <li
                             class="menu-item menu-item-type-custom menu-item-object-custom"
                         >
-                            <a href="/GeneralConsultations">General Consultations</a>
+                            <a href="/Remodeling-Construction">Remodeling/Constuction</a>
+                        </li>
+                        <li
+                            class="menu-item menu-item-type-custom menu-item-object-custom"
+                        >
+                            <a href="/Contact">contact</a>
                         </li>
                     </ul>
                 </div>

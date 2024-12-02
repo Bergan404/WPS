@@ -4,18 +4,20 @@ import Layout from "../layouts/Layout.astro";
 import KeyPoints from "../components/KeyPoints.astro";
 import ContactBox from "../components/ContactBox.astro";
 import HeroSection from "../components/HeroSection.astro";
+import Image from 'astro/components/Image.astro';
 
 import Violations from "../assets/images/WPS-Permit.png";
 import Agreement from "../assets/images/agreement.png";
 import Resolution from "../assets/images/approval (1).png";
 import Route from "../assets/images/route.png";
 import Clock from "../assets/images/clock.png";
+import PermitPulled from "../assets/images/permit_pulled.jpg";
 ---
 
-<Layout title="WPS - Permitting Solutions">
+<Layout title="WPS - Open Permits/General Permitting">
     <HeroSection
         imagePath={Violations}
-        title="Permitting Solutions"
+        title="Open Permits/General Permitting"
         body="Simplify the permitting process with Whiddon Property Solutions. From form submissions to final approvals, we manage every detail, ensuring compliance and peace of mind."
     />
 
@@ -24,53 +26,46 @@ import Clock from "../assets/images/clock.png";
             <h4 class="baskervville-regular text-center">
                 Why Permitting Solutions Matter
             </h4>
+
             <p class="text-center py-3">
-                Whether you're planning new construction or renovations,
-                navigating local permit requirements can be time-consuming and
-                complex. With Whiddon Property Solutions, we ensure that all the
-                necessary forms are properly handled, submitted, and
-                approved—taking the guesswork out of permitting.
+                Existing open and expired permits recorded on properties are far greater issues than what most people would expect. Broward, Miami-Dade, and Palm Beach County are all cracking down and becoming more and more aggressive and take property compliance very seriously especially when a real estate transaction, transfer of title, or work/construction/renovations are being done on the subject property.
             </p>
 
             <p class="text-center py-3">
-                An expired or open permit remains on a property's record for
-                years, and even if the property changes hands, the associated
-                issues persist with the property itself rather than individual
-                owners.
+                Open permits and Expired permits are often retained in a property’s records for many years, and even if the property changes hands, the associated issues remain tied to the property rather than the individual owner.
             </p>
 
             <p class="text-center py-3">
-                Permit violations pose a significant hurdle in real estate
-                transactions. If permit issues go undetected during the sale,
-                the consequences can be severe, as any outstanding violations
-                then become the responsibility of the new owner(s)
+                Permit violations can present a significant barrier in real estate transactions. If permit issues are overlooked during the sale process, the consequences can be severe, as any unresolved violations are transferred to the new owner(s).
+            </p>
+
+            <p class="text-center py-3">
+                Whiddon Property Solutions has devoted themselves to ensuring each and every permitting issue and its processes are handled with utmost care and delicacy in a timely manner, so that the client can sell or renovate their home without the inconvenience of tampering with their timeline and schedules.
             </p>
 
             <h4 class="baskervville-regular text-center">
-                Why Choose Whiddon Property Solutions for Permitting?
+                Whiddon Property Solutions specializes in:
             </h4>
 
-            <div class="row gap-2">
-                <KeyPoints
-                    imagePath={Resolution}
-                    text="Expertise in local permitting regulations."
-                />
-                <KeyPoints
-                    imagePath={Route}
-                    text="Full-service support from start to finish."
-                />
-                <KeyPoints
-                    imagePath={Clock}
-                    text="Timely submissions to avoid delays."
-                />
-                <KeyPoints
-                    imagePath={Agreement}
-                    text="Peace of mind for property owners."
-                />
-            </div>
+            <div class="row align-items-center py-3 flex-column flex-md-row" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="0">
+				<div class="col-md-5 col image_box">
+                    <Image src={PermitPulled} alt="Broward Counties Beautiful Waterfront" class="left_shadow"/>
+				</div>
+				<!-- <p class="col-7 text-center">Whiddon Property Solutions is a premier concierge service specializing in comprehensive solutions and management of property-related challenges for homeowners and property owners in the Broward County of South Florida.</p> -->
+                <ul class="col-md-7 col">
+                    <li><p>Permit Renewals, Revisions, and Extensions</p></li>
+                    <li><p>Any work done without permit(s) on all types of properties.</p></li>
+                    <li><p>Unpermitted Additions, Structures, and Construction</p></li>
+                    <li><p>Owner-Builder Permits</p></li>
+                    <li><p>Manage and Confirm Inspection/Reinspection (Scheduling).</p></li>
+                    <li><p>Making sure Reinspection Fees are Paid</p></li>
+                    <li><p>Coordinating with City Inspectors and Clerks</p></li>
+                    <li><p>Overseeing & handling all necessary City Documentation needed for permit approvals, releases, etc.</p></li>
+                </ul>
+			</div>
 
             <ContactBox
-                text="Need Help with a Permitting Solutions? Contact Us Today for a Free Consultation."
+                text="For a free consultation, contact us at (954) 649-7315 or (954) 649-7444."
             />
         </div>
     </section>
@@ -83,5 +78,12 @@ import Clock from "../assets/images/clock.png";
     .image_box img {
         width: 100%;
         height: 100%;
+    }
+    ul li {
+        /* list-style: none; */
+    }
+    li p {
+        /* font-size: 1.2em; */
+        margin: 5px;
     }
 </style>

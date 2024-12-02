@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import StepByStep from '../components/StepByStep.astro';
+import ContactBox from '../components/ContactBox.astro';
+import HeroSection from '../components/HeroSection.astro';
+import Image from 'astro/components/Image.astro';
+
+import Violations from "../assets/images/WPS-Home_repairs.png";
+import Remodeling from "../assets/images/remodeling.jpg";
+---
+
+<Layout title="WPS - Renovate/Remodel">
+    <HeroSection
+		imagePath={Violations}
+		title="Renovate/Remodel"
+		body="When seeking change, trust Whiddon Property Solutions to handle all Renovations and Remodels you have planned."
+	/>
+
+	<section class="text_content_background">
+		<div class="container py-3">
+			<h4 class="baskervville-regular text-center">How It Works</h4>
+
+			<div class="row align-items-center py-3 flex-column flex-md-row" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="0">
+				<div class="col-md-5 col image_box">
+					<Image src={Remodeling} alt="Broward Counties Beautiful Waterfront" class="left_shadow"/>
+				</div>
+				<p class="col-md-7 col text-center">At Whiddon Property Solutions, we specialize in renovating and remodeling homes to meet our clients' exact needs and expectations. Our team is committed to delivering high-quality results on time, and we make it a point to include pulling all necessary permits with every project. Unlike many contractors who neglect this important step, we understand that failing to pull permits can create significant complications down the line when selling, transferring ownership, or making future improvements to your property. Whiddon Property Solutions is your trusted, one-stop shop for all renovation and remodel needs. Contact us today for a free consultation and estimate!</p>
+			</div>
+
+
+			<ContactBox
+				text="For a free consultation, contact us at (954) 649-7315 or (954) 649-7444."
+			/>
+
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.home_content {
+		background-size: cover;
+	}
+	.image_box img{
+		width: 100%;
+		height: 100%;
+	}
+</style>
