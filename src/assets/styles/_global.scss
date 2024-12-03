@@ -81,6 +81,11 @@ body::-webkit-scrollbar {
   font-family: Aktiv_Bold, sans-serif;
   text-transform: uppercase;
 
+  @include md-desktop {
+    width: 300px;
+    margin: auto;
+  }
+
   @include mobile {
     font-size: 1rem;
   }
