@@ -9,10 +9,18 @@ const { text } = Astro.props
 
 ---
 
-<div class="big_blue">
+<div class="big_blue d-md-none">
 	<p class="bold">{text}</p>
     <Button
         link="tel:9546497315"
+        text="Contact Us"
+    />
+</div>
+
+<div class="big_blue d-none d-md-block">
+	<p class="bold">{text}</p>
+    <Button
+        link="/Contact"
         text="Contact Us"
     />
 </div>
