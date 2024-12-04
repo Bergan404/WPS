@@ -2,7 +2,7 @@
 import WPS from "../../assets/images/WPS-Logo.svg?raw";
 ---
 
-<header class="container-fluid p-3 nav justify-content-center" role="banner">
+<header id="navbar-1" class="container-fluid p-3 nav justify-content-center" role="banner">
     <div class="row justify-content-between align-items-center w-100">
         <div class="col-auto">
             <a class="navbar-logo" href="/">
@@ -14,42 +14,37 @@ import WPS from "../../assets/images/WPS-Logo.svg?raw";
                 <div class="menu-primary-container">
                     <ul id="menu-primary" class="menu">
                         <li
-                            class="menu-item menu-item-type-custom menu-item-object-custom"
+                            class=`${Astro.url.pathname === '/' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`
+                        >
+                            <a href="/">Home</a>
+                        </li>
+                        <li
+                            class=`${Astro.url.pathname === '/AboutUs' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`
                         >
                             <a href="/AboutUs">About Us</a>
                         </li>
                         <li
-                            class="menu-item menu-item-type-custom menu-item-object-custom"
+                            class=`${Astro.url.pathname === '/CodeViolationSolutions' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`
                         >
                             <a href="/CodeViolationSolutions">Code Violations</a>
                         </li>
-                        <!-- <li
-                            class="menu-item menu-item-type-custom menu-item-object-custom"
-                        >
-                            <a href="/BuildingViolationSolutions">Building Violation Solutions</a>
-                        </li> -->
                         <li
-                            class="menu-item menu-item-type-custom menu-item-object-custom"
+                            class=`${Astro.url.pathname === '/PermittingSolutions' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`
                         >
                             <a href="/PermittingSolutions">Open Permits/General Permitting</a>
                         </li>
-                        <!-- <li
-                            class="menu-item menu-item-type-custom menu-item-object-custom"
-                        >
-                            <a href="/UnsafeStructureViolations">Unsafe structure violations</a>
-                        </li> -->
                         <li
-                            class="menu-item menu-item-type-custom menu-item-object-custom"
+                            class=`${Astro.url.pathname === '/GeneralConsultations' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`
                         >
                             <a href="/GeneralConsultations">Consultations</a>
                         </li>
                         <li
-                            class="menu-item menu-item-type-custom menu-item-object-custom"
+                            class=`${Astro.url.pathname === '/Remodeling-Construction' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`
                         >
                             <a href="/Remodeling-Construction">Remodeling/Constuction</a>
                         </li>
                         <li
-                            class="menu-item menu-item-type-custom menu-item-object-custom"
+                            class=`${Astro.url.pathname === '/Contact' ? 'active' : ''} menu-item menu-item-type-custom menu-item-object-custom`
                         >
                             <a href="/Contact">contact</a>
                         </li>
@@ -73,6 +68,11 @@ import WPS from "../../assets/images/WPS-Logo.svg?raw";
     <nav class="mobile-nav d-flex justify-content-center align-items-center">
         <div class="menu-primary-container">
             <ul id="menu-primary" class="menu">
+                <li
+                    class="menu-item menu-item-type-custom menu-item-object-custom"
+                >
+                    <a href="/">Home</a>
+                </li>
                 <li
                     class="menu-item menu-item-type-custom menu-item-object-custom"
                 >
@@ -120,11 +120,11 @@ import WPS from "../../assets/images/WPS-Logo.svg?raw";
 
 <style lang="scss" is:global>
     .WPS-Logo {
-        width: 150px;
+        width: 120px;
         height: auto;
     }
     .nav {
-        position: absolute;
+        position: relative;
         z-index: 1000;
         width: 100%;
         left: 0;
@@ -132,9 +132,18 @@ import WPS from "../../assets/images/WPS-Logo.svg?raw";
         top: 0;
         margin: auto;
         text-align: center;
+        background-color: black;
 
         .navbar-logo {
 
+        }
+
+        .active {
+            border-bottom: 2px solid #C2AA95;
+
+            a {
+                color: #C2AA95 !important;
+            }
         }
 
         .navigation-menu {
@@ -151,7 +160,7 @@ import WPS from "../../assets/images/WPS-Logo.svg?raw";
                         color: white;
                         text-decoration: none;
                         text-transform: uppercase;
-                        font-size: 15px;
+                        font-size: 12px;
                         font-family: Aktiv_Bold, sans-serif;
                         transition: all 0.2s ease-in-out;
 

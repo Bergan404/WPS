@@ -10,10 +10,14 @@ import Broward from "../assets/images/waterfront_fort_lauderdale.png";
 import HandShake from "../assets/images/shaking_hands.png";
 import Phone from "../assets/images/phone_call.png";
 import Relax from "../assets/images/relax.png";
+import PermitPulled from "../assets/images/permit_pulled.jpg";
+import Construction from "../assets/images/WPS-Home_repairs.png";
+import CodeViolations from "../assets/images/code_violations.jpg";
+
 ---
 
 <Layout title="Whiddon Property Solutions">
-	<header class="hero container">
+	<header class="hero container" id="homecover-1">
 		<video autoplay muted loop id="houseopen">
 			<source src={HouseOpen} type="video/mp4">
 		</video>
@@ -27,18 +31,10 @@ import Relax from "../assets/images/relax.png";
 				<li>Remodeling/Construction</li>
 			</ul>
 			<p>Serving Broward, Miami-Dade, and Palm Beach County</p>
-			<div class="d-none d-md-block">
-				<Button
-					link="/Contact"
-					text="Work With Us"
-				/>
-			</div>
-			<div class="d-md-none">
-				<Button
-					link="tel:9546497315"
-					text="Work With Us"
-				/>
-			</div>
+			<Button
+				link="/AboutUs"
+				text="Learn More"
+			/>
 		</div>
 	</header>
 
@@ -50,41 +46,53 @@ import Relax from "../assets/images/relax.png";
 				<p class="text-center">You may ask why Whiddon Property Solutions was started? It all began with our first flip home! We quickly learned the hard way about the importance of permits and following code when performing work and renovations on an investment property. The city of Fort Lauderdale has become more and more aggressive over the last couple of years, and is very serious about compliance. Our oversight created major hurdles when it came time to sell and finding a willing buyer. Instead of letting it hold us back, we turned this challenge into our mission: helping investors and homeowners navigate the complexities of property and code violations, and turning them into solutions. Here’s to learning from our mistakes and building a better way forward! </p>
 			</div>
 
-			<div class="row align-items-center py-3 flex-column flex-md-row" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="0">
-				<div class="col-md-5 col image_box">
-					<Image src={Broward} alt="Broward Counties Beautiful Waterfront" class="left_shadow"/>
+			<div class="row align-items-center py-3 justify-content-center gap-3">
+				<div class="col-lg-3 col-sm-7 col-10 text-center">
+					<a href="/PermittingSolutions">
+						<figure class="my-3">
+							<Image src={PermitPulled} alt="Permit"/>
+							<span class="gdlr-core-image-overlay"><i class="gdlr-core-image-overlay-icon fa fa-link gdlr-core-size-28" style="color: #ffffff;"></i></span>
+						</figure>
+					</a>
+					<a href="/PermittingSolutions" class="items_text">
+						<span>PERMITTING</span>
+					</a>
 				</div>
-				<p class="col-md-7 col text-center">Whiddon Property Solutions is a premier concierge service specializing in comprehensive solutions and management of property-related challenges for homeowners and property owners in the Broward County of South Florida.</p>
-			</div>
-
-			<div class="row align-items-center flex-column flex-md-row-reverse py-3" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="0">
-				<div class="col-md-5 col image_box">
-					<Image src={HandShake} alt="We take care of the work" class="right_shadow"/>
+				<div class="col-lg-3 col-sm-7 col-10 text-center">
+					<a href="/CodeViolationSolutions">
+						<figure class="my-3">
+							<Image src={CodeViolations} alt="Permit"/>
+							<span class="gdlr-core-image-overlay"><i class="gdlr-core-image-overlay-icon fa fa-link gdlr-core-size-28" style="color: #ffffff;"></i></span>
+						</figure>
+					</a>
+					<a href="/CodeViolationSolutions" class="items_text">
+						<span>CODE VIOLATION SOLUTIONS</span>
+					</a>
 				</div>
-				<p class="col-md-7 col text-center">Our dedicated team will take on the heavy lifting by overseeing all interactions with city workers, clerks, inspectors, and other officials, all the way until each case is closed and resolved to the property owner’s satisfaction. We ensure that every necessary document and form is meticulously managed, signed, and submitted, alleviating the burden from our clients and expediting the resolution process.</p>
-			</div>
-
-			<div class="row align-items-center py-3 flex-column flex-md-row" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="0">
-				<div class="col-md-5 col image_box">
-					<Image src={Phone} alt="Customer Service" class="left_shadow"/>
+				<div class="col-lg-3 col-sm-7 col-10 text-center">
+					<a href="/Remodeling-Construction">
+						<figure class="my-3">
+							<Image src={Construction} alt="Construction"/>
+							<span class="gdlr-core-image-overlay"><i class="gdlr-core-image-overlay-icon fa-solid fa-link gdlr-core-size-28" style="color: #ffffff;"></i></span>
+						</figure>
+					</a>
+					<a href="/Remodeling-Construction" class="items_text">
+						<span>REMODELING/CONSTRUCTION</span>
+					</a>
 				</div>
-				<p class="col-md-7 col text-center">
-					We pride ourselves on our around-the-clock customer service, commitment to timely resolutions, and transparency by providing regular updates and maintaining open lines of communication to ensure that our clients are always informed about the status of their property.</p>
 			</div>
+		</div>
 
-			<div class="row align-items-center flex-column flex-md-row-reverse py-3" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="0">
-				<div class="col-md-5 col image_box">
-					<Image src={Relax} alt="Relax while we do the work" class="right_shadow"/>
-				</div>
-				<p class="col-md-7 col text-center">
-					Serving all of Broward County, Whiddon Property Solutions is your trusted partner for seamless property management and compliance, allowing you to focus on what matters most while we handle the intricacies of property care.</p>
-			</div>
-
-			<p class="text-center">Our General Contracting License : LIC# CGC1532274</p>
-
+		<div class="container py-3">
 			<ContactBox
 				text="Need Help? Contact Us Today for a Free Consultation."
 			/>
+		</div>
+
+		<div class="container-fluid parallax_container" style="background-image: url(/WPS-Code_violations.png);">
+			<div class="parallax_overlay hero-content">
+				<p class="bold">Our General Contracting License : LIC# CGC1532274</p>
+			</div>
 		</div>
 
 	</section>
@@ -99,7 +107,7 @@ import Relax from "../assets/images/relax.png";
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
-		height: 100vh;
+		/* height: 100vh; */
 	}
 	#houseopen {
 		position: absolute;
@@ -111,7 +119,7 @@ import Relax from "../assets/images/relax.png";
 	.hero-content {
 		display: grid;
 		place-content: center;
-		height: 100vh;
+		height: 100%;
 		width: 100%;
 		z-index: 10;
 		position: relative;
