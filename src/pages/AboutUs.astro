@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 
 import ContactBox from '../components/ContactBox.astro';
 import AboutHeroSection from '../components/AboutHeroSection.astro';
+import HeroSection from '../components/HeroSection.astro';
 import Image from 'astro/components/Image.astro';
 
 import Violations from "../assets/images/WPS-Home_repairs.png";
@@ -15,7 +16,13 @@ import Relax from "../assets/images/relax.png";
 <Layout title="WPS - About Us">
 
 	<section class="text_content_background">
-        <AboutHeroSection />
+        <!-- <AboutHeroSection /> -->
+
+		<AboutHeroSection
+			imagePath={Broward}
+			title="About Us"
+			body="See what we can do for you!"
+		/>
 
 		<div class="container py-3">
 

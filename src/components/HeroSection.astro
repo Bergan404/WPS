@@ -17,6 +17,7 @@ const imagePathAwaiting = await getImage({
     format: "png"
 });
 
+const isHiddenPath = ['/GeneralConsultations', '/Contact'].includes(Astro.url.pathname);
 ---
 
 <header class="hero container" id="homecover-1">
@@ -25,10 +26,25 @@ const imagePathAwaiting = await getImage({
     </picture>
     <div class="overlay"></div>
     <div class="hero-content hero_text_shadow" data-aos="zoom-in" data-aos-easing="ease-out-back" data-aos-duration="2000" data-aos-delay="0">
-        <h4 class="baskervville-regular">WHIDDON PROPERTY SOLUTIONS</h4>
+        <!-- <h4 class="baskervville-regular">WHIDDON PROPERTY SOLUTIONS</h4> -->
         <h2 class="bold">{title}</h2>
         <p>{body}</p>
-		<div class="d-none d-md-block">
+		<!-- ${Astro.url.pathname === '/GeneralConsultations' ? 'active' : ''} -->
+		{!isHiddenPath && (
+			  <div class="d-none d-md-block">
+				<Button
+				  link="/Contact"
+				  text="Work With Us"
+				/>
+			  </div>
+			  <div class="d-md-none">
+				<Button
+				  link="tel:9546497315"
+				  text="Work With Us"
+				/>
+			  </div>
+		  )}
+		<!-- <div class="d-none d-md-block">
 			<Button
 				link="/Contact"
 				text="Work With Us"
@@ -39,7 +55,7 @@ const imagePathAwaiting = await getImage({
 				link="tel:9546497315"
 				text="Work With Us"
 			/>
-		</div>
+		</div> -->
     </div>
 </header>
 
