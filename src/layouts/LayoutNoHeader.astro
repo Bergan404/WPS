@@ -21,6 +21,11 @@ const GA_TRACKING_ID = "G-DFTNGZCC2Q";
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<script>
@@ -29,11 +34,14 @@ const GA_TRACKING_ID = "G-DFTNGZCC2Q";
 		</script>
 		<!-- Google tag (gtag.js) -->
 		<script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}></script>
-		<script>
+		<!-- Initialize gtag() in a safe inline script -->
+		<script is:inline>
+			if (typeof window !== "undefined") {
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
+			function gtag(){ dataLayer.push(arguments); }
 			gtag('js', new Date());
 			gtag('config', 'G-DFTNGZCC2Q');
+			}
 		</script>
 	</head>
 	<Navbar />
