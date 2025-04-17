@@ -10,6 +10,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import "../assets/styles/style.scss";
 
 import "aos/dist/aos.css";
+
+const GA_TRACKING_ID = "G-DFTNGZCC2Q";
 ---
 
 <!doctype html>
@@ -24,7 +26,15 @@ import "aos/dist/aos.css";
 		<script>
 			import AOS from "aos";
 			AOS.init();
-		  </script>
+		</script>
+		<!-- Google tag (gtag.js) -->
+		<script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-DFTNGZCC2Q');
+		</script>
 	</head>
 	<Navbar />
 	<body>
