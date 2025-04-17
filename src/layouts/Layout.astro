@@ -38,11 +38,14 @@ const GA_TRACKING_ID = "G-DFTNGZCC2Q";
 		</script>
 		<!-- Google tag (gtag.js) -->
 		<script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}></script>
-		<script>
+		<!-- Initialize gtag() in a safe inline script -->
+		<script is:inline>
+			if (typeof window !== "undefined") {
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
+			function gtag(){ dataLayer.push(arguments); }
 			gtag('js', new Date());
 			gtag('config', 'G-DFTNGZCC2Q');
+			}
 		</script>
 	</head>
 	<Navbar />
